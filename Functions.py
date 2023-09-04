@@ -8,12 +8,12 @@ def decToBinary(dec):
     return res
 
 def binaryToN(bin, type):
-    res = 0
     if type.lower() == "decimal":
+        res = 0
         power = len(bin) - 1
         for i in bin:
             if i == "1":
-                res += 2**i
+                res += 2 ** power
             power -= 1
         return res
 
@@ -22,13 +22,16 @@ def binaryToN(bin, type):
         power = len(bin) - 1
         for i in bin:
             if i == "1":
-                temp += 2 ** i
+                temp += 2 ** power
             power -= 1
+
+        octal_num = ""
         while temp > 0:
             rem = temp % 8
-            oct = str(rem) + oct
+            octal_num = str(rem) + octal_num
             temp = temp // 8
-        return oct
+
+        return octal_num
 
     elif type.lower() == "hexadecimal":
         decimal = 0
