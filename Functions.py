@@ -69,7 +69,7 @@ def decToHex(dec):
 
 def main():
     print(decToBinary(10))
-    print(binaryToN(1011, "hexadecimal"))
+    print(binaryToN("1011", "hexadecimal"))
     print(decToOctal(10))
     print(decToHex(10))
 
